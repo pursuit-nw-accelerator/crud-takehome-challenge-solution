@@ -13,8 +13,6 @@ const validateId = (request, response, next) => {
   next();
 };
 
-const validateApplicationExists = (request, response, next) => {};
-
 const validateApplication = (request, response, next) => {
   const application = request.body;
 
@@ -39,7 +37,7 @@ const validateApplication = (request, response, next) => {
 
   for (const field in application) {
     if (!APPLICATION_FIELDS.includes(field)) {
-      return response.status(400).json({ error: `filed ${field} not allowed` });
+      return response.status(400).json({ error: `field ${field} not allowed` });
     }
   }
 
@@ -49,6 +47,5 @@ const validateApplication = (request, response, next) => {
 
 module.exports = {
   validateId,
-  validateApplicationExists,
   validateApplication,
 };
