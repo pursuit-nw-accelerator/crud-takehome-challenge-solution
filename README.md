@@ -3,6 +3,7 @@
 
 ## Running the application locally
 1. Clone this repo to your computer
+1. `cd crud-takehome-challenge-solution`
 1. Install dependencies: `npm install`
 1. To specify a port to listen on, add a `.env` file to the root of the project and set the `PORT` variable. For example: `PORT=8888`
 1. Run the server: `npm start`
